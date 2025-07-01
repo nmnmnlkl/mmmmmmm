@@ -5,8 +5,16 @@
 
 [build.environment]
   NODE_VERSION = "18.20.2"
+  NPM_VERSION = "8.19.4"
   NODE_ENV = "production"
   VITE_API_URL = "/.netlify/functions/api"
+  NPM_FLAGS = "--legacy-peer-deps"
+  NETLIFY_USE_YARN = "false"
+  NETLIFY_NODE_VERSION = "18.20.2"
+
+[functions]
+  node_bundler = "esbuild"
+  external_node_modules = ["@netlify/functions"]
 
 # Single Page Application (SPA) fallback
 [[redirects]]
